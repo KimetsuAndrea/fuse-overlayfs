@@ -172,7 +172,7 @@ jobs:
     - name: Create release artifacts
       run: |
         mkdir -p /tmp/release
-        for arch in x86_64 aarch64 armv7l s390x ppc64le riscv64; do
+        for arch in aarch64 arm64; do
           cp "/tmp/artifacts/fuse-overlayfs-${arch}/fuse-overlayfs" "/tmp/release/fuse-overlayfs-${arch}"
           chmod +x "/tmp/release/fuse-overlayfs-${arch}"
         done
